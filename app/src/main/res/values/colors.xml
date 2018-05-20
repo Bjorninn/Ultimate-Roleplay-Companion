@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#662E1C</color>
+    <color name="colorPrimaryDark">#662E1C</color>
+    <color name="colorAccent">#662E1C</color>
+
+    <color name="dnd_header">#dc596a</color>
+    <color name="dnd_text">#444142</color>
+    <color name="dnd_text2">#455445</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="cayenne">#AF4425</color>
+    <color name="cinnamon">#662E1C</color>
+    <color name="cream">#EBDCB2</color>
+    <color name="caramel">#C9A66B</color>
+
+</resources>
