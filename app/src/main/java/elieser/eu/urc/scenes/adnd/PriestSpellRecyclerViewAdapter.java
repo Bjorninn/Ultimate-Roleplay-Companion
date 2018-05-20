@@ -1,4 +1,4 @@
-package elieser.eu.urc.scenes;
+package elieser.eu.urc.scenes.adnd;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,9 +15,9 @@ import elieser.eu.urc.data.adnd.Spell;
 public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestSpellRecyclerViewAdapter.ViewHolder>
 {
     private final List<Spell> spellList;
-    private final OnFragmentInteractionListener listener;
+    private final OnSpellChosenListener listener;
 
-    public PriestSpellRecyclerViewAdapter(List<Spell> spells, OnFragmentInteractionListener listener)
+    public PriestSpellRecyclerViewAdapter(List<Spell> spells, OnSpellChosenListener listener)
     {
         spellList = new ArrayList<>(spells.size());
         spellList.addAll(spells);
@@ -41,9 +41,10 @@ public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestS
         holder.level.setText(spell.getLevel().toString());
         holder.name.setText(spell.getName());
         holder.school.setText(String.format("(%s)", spell.getSchool()));
-        holder.sphere.setText(spell.getSphere());
+        //holder.sphere.setText(spell.getSphere());
         holder.range.setText(spell.getRange());
         holder.duration.setText(spell.getDuration());
+        holder.areaOfEffect.setText(spell.getAoe());
         holder.savingThrow.setText(spell.getSave());
 
         holder.view.setOnClickListener(new View.OnClickListener()
@@ -53,7 +54,7 @@ public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestS
             {
                 if (listener != null)
                 {
-                    listener.onFragmentInteraction(spell);
+                    listener.onSpellChosen(spell);
                 }
             }
         });
@@ -75,6 +76,7 @@ public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestS
         public final TextView sphere;
         public final TextView range;
         public final TextView duration;
+        public final TextView areaOfEffect;
         public final TextView savingThrow;
 
         public ViewHolder(View itemView)
@@ -89,6 +91,7 @@ public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestS
             sphere = itemView.findViewById(R.id.sphere);
             range = itemView.findViewById(R.id.range);
             duration = itemView.findViewById(R.id.duration);
+            areaOfEffect = itemView.findViewById(R.id.area_of_effect);
             savingThrow = itemView.findViewById(R.id.saving_throw);
         }
     }

@@ -1,21 +1,20 @@
-package elieser.eu.urc;
+package elieser.eu.urc.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import elieser.eu.urc.R;
 import elieser.eu.urc.data.adnd.Spell;
-import elieser.eu.urc.scenes.OnFragmentInteractionListener;
-import elieser.eu.urc.scenes.PriestSpells;
+import elieser.eu.urc.scenes.adnd.OnSpellChosenListener;
+import elieser.eu.urc.scenes.adnd.PriestSpellScene;
 
-public class MainActivity extends AppCompatActivity implements OnFragmentInteractionListener
+public class MainActivity extends AppCompatActivity implements OnSpellChosenListener
 {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -27,12 +26,15 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
             switch (item.getItemId())
             {
                 case R.id.navigation_adnd:
-                    FragmentManager fragmentManager = getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                    FragmentManager fragmentManager = getSupportFragmentManager();
+//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//                    PriestSpellsListScene fragment = new PriestSpellsListScene();
+//                    fragmentTransaction.add(R.id.fragment_container, fragment).addToBackStack("test");
+//                    fragmentTransaction.commit();
 
-                    PriestSpells fragment = new PriestSpells();
-                    fragmentTransaction.add(R.id.fragment_container, fragment).addToBackStack("test");
-                    fragmentTransaction.commit();
+                    Intent myIntent = new Intent(MainActivity.this, AdndActivity.class);
+                    MainActivity.this.startActivity(myIntent);
 
                     return true;
             }
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements OnFragmentInterac
     }
 
     @Override
-    public void onFragmentInteraction(Spell spell)
+    public void onSpellChosen(Spell spell)
     {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

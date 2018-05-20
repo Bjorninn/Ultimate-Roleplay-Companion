@@ -1,9 +1,7 @@
 package elieser.eu.urc.data;
 
 import android.content.Context;
-import android.util.Log;
 
-import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -38,11 +36,9 @@ public class JsonLoader
         return json;
     }
 
-    public static Spells priestSpellsFromJson(Context context)
+    protected static Spells priestSpellsFromJson(Context context)
     {
         String json = loadJsonFromAsset(context, "all_spells.json");
-
-        Log.d("MSG", json);
 
         Gson gson = new GsonBuilder().create();
 

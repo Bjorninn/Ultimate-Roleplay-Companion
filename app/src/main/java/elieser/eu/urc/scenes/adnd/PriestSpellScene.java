@@ -1,4 +1,4 @@
-package elieser.eu.urc;
+package elieser.eu.urc.scenes.adnd;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import org.apache.commons.lang3.StringUtils;
 
+import elieser.eu.urc.R;
 import elieser.eu.urc.data.adnd.Spell;
 import elieser.eu.urc.widgets.UrcToolbar;
 
@@ -21,15 +22,15 @@ public class PriestSpellScene extends Fragment
     private static final String ARG_SPELL = "spell";
 
     private Spell spell;
-    private String[] levelNames = new String[]{"1st-Level Spells",
-            "2nd-Level Spells",
-            "3rd-Level Spells",
-            "4th-Level Spells",
-            "5th-Level Spells",
-            "6th-Level Spells",
-            "7th-Level Spells",
-            "8th-Level Spells",
-            "9th-Level Spells"};
+    private String[] levelNames = new String[]{"1st-Level Spell",
+            "2nd-Level Spell",
+            "3rd-Level Spell",
+            "4th-Level Spell",
+            "5th-Level Spell",
+            "6th-Level Spell",
+            "7th-Level Spell",
+            "8th-Level Spell",
+            "9th-Level Spell"};
 
     public PriestSpellScene()
     {

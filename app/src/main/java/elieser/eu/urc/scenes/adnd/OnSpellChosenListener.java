@@ -1,4 +1,4 @@
-package elieser.eu.urc.scenes;
+package elieser.eu.urc.scenes.adnd;
 
 import elieser.eu.urc.data.adnd.Spell;
 
@@ -12,7 +12,7 @@ import elieser.eu.urc.data.adnd.Spell;
  * "http://developer.android.com/training/basics/fragments/communicating.html"
  * >Communicating with Other Fragments</a> for more information.
  */
-public interface OnFragmentInteractionListener
+public interface OnSpellChosenListener
 {
-    void onFragmentInteraction(Spell spell);
+    void onSpellChosen(Spell spell);
 }

@@ -6,4 +6,9 @@
         android:icon="@drawable/dnd_logo"
         android:title="@string/adnd" />
 
+    <item
+        android:id="@+id/navigation_genesys"
+        android:icon="@drawable/genesys_logo"
+        android:title="@string/genesys" />
+
 </menu>
