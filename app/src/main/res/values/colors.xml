@@ -20,4 +20,6 @@
     <color name="genesys_background">#F8F6F2</color>
     <color name="genesys_headline_orange">#F16C2F</color>
 
+    <color name="transparent">#00000000</color>
+
 </resources>

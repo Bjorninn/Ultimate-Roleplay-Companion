@@ -1,4 +1,4 @@
-package elieser.eu.urc.scenes.adnd;
+package elieser.eu.urc.scenes.adnd.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -11,6 +11,7 @@ import java.util.List;
 
 import elieser.eu.urc.R;
 import elieser.eu.urc.data.adnd.Spell;
+import elieser.eu.urc.scenes.adnd.OnSpellChosenListener;
 
 public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestSpellRecyclerViewAdapter.ViewHolder>
 {

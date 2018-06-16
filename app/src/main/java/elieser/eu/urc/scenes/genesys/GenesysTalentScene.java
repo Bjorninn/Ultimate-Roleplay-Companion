@@ -2,6 +2,7 @@ package elieser.eu.urc.scenes.genesys;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import elieser.eu.urc.R;
 import elieser.eu.urc.data.BundleKeys;
 import elieser.eu.urc.data.genesys.GenesysDataStore;
 import elieser.eu.urc.data.genesys.Talent;
+import elieser.eu.urc.navigation.Navigator;
 
 /**
  * Created by bjornjonsson on 10/03/2018.
@@ -66,7 +68,7 @@ public class GenesysTalentScene extends Fragment
             @Override
             public void onClick(View view)
             {
-//                onBackPressed();
+                Navigator.popFragmentBackStack((AppCompatActivity) getActivity());
             }
         });
 
@@ -76,7 +78,6 @@ public class GenesysTalentScene extends Fragment
             @Override
             public void onClick(View view)
             {
-
             }
         });
     }

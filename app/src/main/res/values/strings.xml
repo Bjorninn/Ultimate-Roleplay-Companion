@@ -13,4 +13,6 @@
     <string name="title_activity_adnd">AdndActivity</string>
     <string name="wizard_spells">Wizard Spells</string>
     <string name="priest_spells">Priest Spells</string>
+    <string name="talents">Talents</string>
+    <string name="urc">Ultimate Roleplay Companion</string>
 </resources>

@@ -23,42 +23,20 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:id="@+id/wizard_spells_button"
+                android:id="@+id/genesys_talents_button"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/ic_scroll_unfurled" />
+                android:background="@drawable/ic_scroll_unfurled"
+                android:contentDescription="@string/talents" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/wizard_spells_button"
+                android:layout_below="@+id/genesys_talents_button"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="4dp"
-                android:text="@string/wizard_spells"
-                android:textColor="@color/cinnamon"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="96dp"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/priest_spells_button"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/ic_ankh"
-                android:backgroundTint="@color/cinnamon" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/priest_spells_button"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="4dp"
-                android:text="@string/priest_spells"
+                android:text="@string/talents"
                 android:textColor="@color/cinnamon"
                 android:textStyle="bold" />
         </RelativeLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="48dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/characteristic_circle" />
+
+        <TextView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="-1dp"
+            android:layout_marginTop="-1dp"
+            android:gravity="center"
+            android:text="5"
+            android:textAlignment="center"
+            android:textColor="@color/cinnamon"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/circle"
+            android:text="BRAWN"
+            android:textAlignment="center"
+            android:textColor="@color/cinnamon"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

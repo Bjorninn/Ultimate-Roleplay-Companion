@@ -1,4 +1,4 @@
-package elieser.eu.urc.scenes.genesys;
+package elieser.eu.urc.scenes.genesys.adapters;
 
 import android.content.Context;
 import android.os.Handler;
@@ -16,6 +16,7 @@ import java.util.List;
 
 import elieser.eu.urc.R;
 import elieser.eu.urc.data.genesys.Talent;
+import elieser.eu.urc.scenes.genesys.TalentHelper;
 
 
 /**

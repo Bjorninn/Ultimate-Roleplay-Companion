@@ -16,6 +16,7 @@ import java.util.List;
 import elieser.eu.urc.R;
 import elieser.eu.urc.data.DataLoader;
 import elieser.eu.urc.data.adnd.Spell;
+import elieser.eu.urc.scenes.adnd.adapters.PriestSpellRecyclerViewAdapter;
 import elieser.eu.urc.widgets.UrcToolbar;
 
 public class PriestSpellsListScene extends Fragment

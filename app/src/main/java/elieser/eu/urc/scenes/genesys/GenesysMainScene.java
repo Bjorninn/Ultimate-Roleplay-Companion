@@ -1,6 +1,5 @@
-package elieser.eu.urc.scenes.adnd;
+package elieser.eu.urc.scenes.genesys;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,12 +10,15 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import elieser.eu.urc.R;
+import elieser.eu.urc.data.genesys.GenesysDataStore;
 import elieser.eu.urc.navigation.Navigator;
 import elieser.eu.urc.widgets.UrcToolbar;
 
-public class AdndMainScene extends Fragment
+public class GenesysMainScene extends Fragment
 {
-    public AdndMainScene()
+    private GenesysDataStore dataStore;
+
+    public GenesysMainScene()
     {
         // Required empty public constructor
     }
@@ -25,13 +27,16 @@ public class AdndMainScene extends Fragment
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        dataStore = new GenesysDataStore();
+        dataStore.loadTalentData(getContext());
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.scene_adnd, container, false);
+        return inflater.inflate(R.layout.scene_genesys, container, false);
     }
 
     @Override
@@ -49,26 +54,19 @@ public class AdndMainScene extends Fragment
             }
         });
 
-        ImageButton priestSpellButton = view.findViewById(R.id.priest_spells_button);
-        priestSpellButton.setOnClickListener(new View.OnClickListener()
+        ImageButton genesysTalentButton = view.findViewById(R.id.genesys_talents_button);
+        SetOnClickListener(genesysTalentButton, GenesysTalentListScene.class);
+    }
+
+    private void SetOnClickListener(View button, final Class<? extends android.support.v4.app.Fragment> clazz)
+    {
+        button.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                Navigator.navigationEvent(PriestSpellsListScene.class, (AppCompatActivity) getActivity());
+                Navigator.navigationEvent(clazz, (AppCompatActivity) getActivity());
             }
         });
-    }
-
-    @Override
-    public void onAttach(Context context)
-    {
-        super.onAttach(context);
-    }
-
-    @Override
-    public void onDetach()
-    {
-        super.onDetach();
     }
 }

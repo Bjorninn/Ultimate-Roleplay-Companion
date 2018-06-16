@@ -19,6 +19,8 @@ import elieser.eu.urc.data.BundleKeys;
 import elieser.eu.urc.data.genesys.GenesysDataStore;
 import elieser.eu.urc.data.genesys.Talent;
 import elieser.eu.urc.navigation.Navigator;
+import elieser.eu.urc.scenes.genesys.adapters.GenesysTalentAdapter;
+import elieser.eu.urc.widgets.UrcToolbar;
 
 
 /**
@@ -67,6 +69,16 @@ public class GenesysTalentListScene extends Fragment implements GenesysTalentAda
         recyclerView.setAdapter(adapter);
 
         adapter.setData(talents);
+
+        UrcToolbar toolbar = view.findViewById(R.id.toolbar);
+        toolbar.backButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Navigator.popFragmentBackStack((AppCompatActivity) getActivity());
+            }
+        });
     }
 
     @Override
