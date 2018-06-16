@@ -35,8 +35,6 @@ public final class Navigator
             FragmentManager.BackStackEntry first = manager.getBackStackEntryAt(0);
             manager.popBackStack(first.getId(), FragmentManager.POP_BACK_STACK_INCLUSIVE);
         }
-
-//        navigationEvent(ExaltedHomeScene.class); //TODO change to start scene
     }
 
     public static int navigationEvent(Class<? extends android.support.v4.app.Fragment> clazz, AppCompatActivity activity)

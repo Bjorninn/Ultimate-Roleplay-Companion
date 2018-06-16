@@ -23,19 +23,17 @@ public class MainActivity extends AppCompatActivity implements OnSpellChosenList
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item)
         {
+            Intent myIntent;
+
             switch (item.getItemId())
             {
                 case R.id.navigation_adnd:
-//                    FragmentManager fragmentManager = getSupportFragmentManager();
-//                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//                    PriestSpellsListScene fragment = new PriestSpellsListScene();
-//                    fragmentTransaction.add(R.id.fragment_container, fragment).addToBackStack("test");
-//                    fragmentTransaction.commit();
-
-                    Intent myIntent = new Intent(MainActivity.this, AdndActivity.class);
+                    myIntent = new Intent(MainActivity.this, AdndActivity.class);
                     MainActivity.this.startActivity(myIntent);
-
+                    return true;
+                case R.id.navigation_genesys:
+                    myIntent = new Intent(MainActivity.this, GenesysActivity.class);
+                    MainActivity.this.startActivity(myIntent);
                     return true;
             }
             return false;

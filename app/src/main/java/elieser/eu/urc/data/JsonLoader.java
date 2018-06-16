@@ -2,6 +2,7 @@ package elieser.eu.urc.data;
 
 import android.content.Context;
 
+import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -9,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import elieser.eu.urc.data.adnd.Spells;
+import elieser.eu.urc.data.genesys.Talents;
 
 /**
  * Created by bjorn on 21/04/16.
@@ -43,5 +45,15 @@ public class JsonLoader
         Gson gson = new GsonBuilder().create();
 
         return gson.fromJson(json, Spells.class);
+    }
+
+
+    public static Talents genesysTalentsFromJson(Context context)
+    {
+        String json = loadJsonFromAsset(context, "genesys-talents.json");
+
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+
+        return gson.fromJson(json, Talents.class);
     }
 }

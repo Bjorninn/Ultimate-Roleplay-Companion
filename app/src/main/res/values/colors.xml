@@ -16,4 +16,8 @@
 
     <color name="light_cream">#f9f3e1</color>
 
+    <color name="black">#000000</color>
+    <color name="genesys_background">#F8F6F2</color>
+    <color name="genesys_headline_orange">#F16C2F</color>
+
 </resources>

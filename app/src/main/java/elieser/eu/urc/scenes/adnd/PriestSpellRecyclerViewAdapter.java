@@ -41,7 +41,7 @@ public class PriestSpellRecyclerViewAdapter extends RecyclerView.Adapter<PriestS
         holder.level.setText(spell.getLevel().toString());
         holder.name.setText(spell.getName());
         holder.school.setText(String.format("(%s)", spell.getSchool()));
-        //holder.sphere.setText(spell.getSphere());
+        holder.sphere.setText(spell.getSource());
         holder.range.setText(spell.getRange());
         holder.duration.setText(spell.getDuration());
         holder.areaOfEffect.setText(spell.getAoe());
