@@ -15,4 +15,17 @@
     <string name="priest_spells">Priest Spells</string>
     <string name="talents">Talents</string>
     <string name="urc">Ultimate Roleplay Companion</string>
+    <string name="brawn">Brawn</string>
+    <string name="agility">Agility</string>
+    <string name="intellect">Intellect</string>
+    <string name="cunning">Cunning</string>
+    <string name="willpower">Willpower</string>
+    <string name="soak">Soak</string>
+    <string name="soak_value">soak value</string>
+    <string name="w_threshold">W. Threshold</string>
+    <string name="s_threshold">S. Threshold</string>
+    <string name="m_r_defense">M/R Defense</string>
+    <string name="skills">Skills</string>
+    <string name="Abilities">Abilities</string>
+    <string name="Equipment">Equipment</string>
 </resources>

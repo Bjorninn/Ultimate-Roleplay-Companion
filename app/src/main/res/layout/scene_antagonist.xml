@@ -1,39 +1,447 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="48dp"
-        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/cayenne"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        tools:text="Politician and Senator [Nemesis]" />
 
-        <ImageView
-            android:id="@+id/circle"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:src="@drawable/characteristic_circle" />
+    <LinearLayout
+        android:id="@+id/characteristics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:background="@color/cream">
+
+            <ImageView
+                android:id="@+id/brawn_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/brawn"
+                android:src="@drawable/characteristic_circle" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/brawn_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/brawn_circle"
+                android:background="@color/cinnamon"
+                android:text="@string/brawn"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <ImageView
+                android:id="@+id/agility_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/brawn"
+                android:src="@drawable/characteristic_circle" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/agility_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/agility_circle"
+                android:background="@color/cinnamon"
+                android:text="@string/agility"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <ImageView
+                android:id="@+id/intellect_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/brawn"
+                android:src="@drawable/characteristic_circle" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/intellect_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/intellect_circle"
+                android:background="@color/cinnamon"
+                android:text="@string/intellect"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <ImageView
+                android:id="@+id/cunning_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/brawn"
+                android:src="@drawable/characteristic_circle" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/cunning_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cunning_circle"
+                android:background="@color/cinnamon"
+                android:text="@string/cunning"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <ImageView
+                android:id="@+id/willpower_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/brawn"
+                android:src="@drawable/characteristic_circle" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/willpower_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/willpower_circle"
+                android:background="@color/cinnamon"
+                android:text="@string/willpower"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <ImageView
+                android:id="@+id/presence_circle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/brawn"
+                android:src="@drawable/characteristic_circle" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="-1dp"
+                android:layout_marginTop="-1dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                tools:text="5" />
+
+            <TextView
+                android:id="@+id/presence_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/presence_circle"
+                android:background="@color/cinnamon"
+                android:text="@string/intellect"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/defenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/characteristics"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp">
+
+        <RelativeLayout
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:background="@color/cream">
+
+            <TextView
+                android:id="@+id/soak_value_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinnamon"
+                android:gravity="center"
+                android:text="@string/soak_value"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/soak_value_header"
+                android:gravity="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <TextView
+                android:id="@+id/wound_threshold_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinnamon"
+                android:gravity="center"
+                android:text="@string/w_threshold"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wound_threshold_header"
+                android:gravity="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <TextView
+                android:id="@+id/strain_threshold_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinnamon"
+                android:gravity="center"
+                android:text="@string/s_threshold"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/strain_threshold_header"
+                android:gravity="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="2" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="@color/cream">
+
+            <TextView
+                android:id="@+id/defenses_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cinnamon"
+                android:gravity="center"
+                android:text="@string/m_r_defense"
+                android:textAllCaps="true"
+                android:textColor="@color/cream"
+                android:textSize="11dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/defenses_header"
+                android:layout_toRightOf="@+id/split"
+                android:gravity="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="2" />
+
+            <View
+                android:id="@+id/split"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/defenses_header"
+                android:layout_toStartOf="@+id/split"
+                android:gravity="center"
+                android:textColor="@color/cinnamon"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="2" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/defenses"
+        android:orientation="vertical">
 
         <TextView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginLeft="-1dp"
-            android:layout_marginTop="-1dp"
-            android:gravity="center"
-            android:text="5"
-            android:textAlignment="center"
+            android:id="@+id/skills_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/skills"
             android:textColor="@color/cinnamon"
-            android:textSize="24sp" />
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/skills"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/cream" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/circle"
-            android:text="BRAWN"
-            android:textAlignment="center"
-            android:textColor="@color/cinnamon"
-            android:textSize="12sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            android:text="@string/talents" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Abilities" />
 
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Equipment" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

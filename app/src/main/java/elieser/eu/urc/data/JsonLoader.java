@@ -56,4 +56,6 @@ public class JsonLoader
 
         return gson.fromJson(json, Talents.class);
     }
+
+
 }
