@@ -22,4 +22,10 @@
 
     <color name="transparent">#00000000</color>
 
+    <color name="ability_green">#3fac49</color>
+    <color name="proficiency_yellow">#fff100</color>
+    <color name="boost_blue">#72ccdb</color>
+    <color name="difficulty_purple">#522480</color>
+    <color name="challenge_red">#d1232a</color>
+
 </resources>

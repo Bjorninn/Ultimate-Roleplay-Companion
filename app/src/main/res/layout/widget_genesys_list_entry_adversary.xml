@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textColor="@color/cayenne"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Drow Priestess [Nemesis]" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Br: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/brawn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Ag: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/agility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Int: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/intellect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Cun: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cunning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Will: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/willpower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Pr: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/presence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soak: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/soak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Wounds: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/wounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Strain: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/strain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Defenses: "
+            android:textColor="@color/cayenne"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/defenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cinnamon"
+            android:textStyle="bold"
+            tools:text="1/1" />
+
+    </LinearLayout>
+
+</LinearLayout>

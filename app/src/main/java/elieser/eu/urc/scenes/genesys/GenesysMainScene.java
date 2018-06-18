@@ -4,10 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Spannable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import elieser.eu.urc.R;
 import elieser.eu.urc.data.genesys.GenesysDataStore;
@@ -17,6 +19,7 @@ import elieser.eu.urc.widgets.UrcToolbar;
 public class GenesysMainScene extends Fragment
 {
     private GenesysDataStore dataStore;
+    private GenesysHelper helper;
 
     public GenesysMainScene()
     {
@@ -30,6 +33,9 @@ public class GenesysMainScene extends Fragment
 
         dataStore = new GenesysDataStore();
         dataStore.loadTalentData(getContext());
+        dataStore.loadAdversarieData(getContext());
+
+        helper = new GenesysHelper(getActivity().getAssets());
     }
 
     @Override
@@ -56,6 +62,13 @@ public class GenesysMainScene extends Fragment
 
         ImageButton genesysTalentButton = view.findViewById(R.id.genesys_talents_button);
         SetOnClickListener(genesysTalentButton, GenesysTalentListScene.class);
+
+        ImageButton genesysAntagonistButton = view.findViewById(R.id.genesys_antagonists_button);
+        SetOnClickListener(genesysAntagonistButton, GenesysAdversaryListScene.class);
+
+        TextView textView = view.findViewById(R.id.testLabel);
+        Spannable dicePool = helper.createBoostOrSetbackDicePool(getContext(),4,true);
+        textView.setText(dicePool);
     }
 
     private void SetOnClickListener(View button, final Class<? extends android.support.v4.app.Fragment> clazz)

@@ -41,6 +41,37 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
+        <RelativeLayout
+            android:layout_width="96dp"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/genesys_antagonists_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/transparent"
+                android:contentDescription="@string/talents"
+                android:src="@drawable/genesys_logo"
+                android:tint="@color/cinnamon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/genesys_antagonists_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="@string/antagonists"
+                android:textColor="@color/cinnamon"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/testLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cccdd"/>
+
     </LinearLayout>
 
 </RelativeLayout>
