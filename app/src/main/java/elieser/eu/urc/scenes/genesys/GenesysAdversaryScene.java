@@ -2,6 +2,7 @@ package elieser.eu.urc.scenes.genesys;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.util.Log;
@@ -49,6 +50,7 @@ public class GenesysAdversaryScene extends Fragment
     private TextView rangedDefense;
 
     private LinearLayout skillsContainer;
+    private LinearLayout weaponsContainer;
 
 
     @Override
@@ -84,6 +86,7 @@ public class GenesysAdversaryScene extends Fragment
         rangedDefense = view.findViewById(R.id.ranged_defense);
 
         skillsContainer = view.findViewById(R.id.skills);
+        weaponsContainer = view.findViewById(R.id.weapons);
 
         String name = getArguments().getString(BundleKeys.NAME);
         Adversary adversary = GenesysDataStore.getInstance().getAdversary(name);
@@ -147,6 +150,7 @@ public class GenesysAdversaryScene extends Fragment
 
         List<Weapon> weapons = new ArrayList<>();
         List<String> equipment = adversary.getEquipment();
+        int n = 0;
 
         for (String s : equipment)
         {
@@ -154,6 +158,48 @@ public class GenesysAdversaryScene extends Fragment
             {
                 Weapon weapon = GenesysDataStore.getInstance().getWeapon(s);
                 weapons.add(weapon);
+
+                View weaponView = getLayoutInflater().inflate(R.layout.widget_weapon_entry, null);
+                weaponsContainer.addView(weaponView);
+
+                TextView name = weaponView.findViewById(R.id.name);
+                name.setText(weapon.getName());
+
+                if (weapon.brawnIsAdded())
+                {
+
+                }
+
+                TextView damage = weaponView.findViewById(R.id.damage);
+                damage.setText(String.valueOf(weapon.getDamage()));
+
+                TextView crit = weaponView.findViewById(R.id.crit);
+                crit.setText(String.valueOf(weapon.getCritical()));
+
+                String weaponRange = weapon.getRange();
+                if (weaponRange != null)
+                {
+                    weaponRange = weaponRange.substring(0, 1);
+                    TextView range = weaponView.findViewById(R.id.range);
+                    range.setText(weaponRange);
+                }
+
+                int color;
+
+                if (n%2 == 0)
+                {
+                    color = ContextCompat.getColor(getContext(), R.color.cream);
+                }
+                else
+                {
+                    color = ContextCompat.getColor(getContext(), R.color.light_cream);
+                }
+
+                LinearLayout root = weaponView.findViewById(R.id.root);
+                root.setBackgroundColor(color);
+
+
+                n++;
             }
         }
 

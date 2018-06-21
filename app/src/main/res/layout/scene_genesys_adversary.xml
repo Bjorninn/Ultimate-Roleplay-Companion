@@ -442,8 +442,8 @@
             android:id="@+id/skills_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/skills"
             android:layout_marginLeft="4dp"
+            android:text="@string/skills"
             android:textColor="@color/cinnamon"
             android:textStyle="bold" />
 
@@ -474,10 +474,19 @@
             android:text="@string/Abilities" />
 
 
-        <TextView
+        <LinearLayout
+            android:id="@+id/weapons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/Equipment" />
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/cream"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingTop="4dp"
+            tools:layout_height="24dp" />
 
     </LinearLayout>
 

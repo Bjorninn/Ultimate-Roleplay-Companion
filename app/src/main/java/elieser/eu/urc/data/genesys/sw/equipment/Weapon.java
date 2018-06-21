@@ -22,6 +22,11 @@ public class Weapon extends Gear
         special = new ArrayList<>();
     }
 
+    public boolean brawnIsAdded()
+    {
+        return addsToBrawn;
+    }
+
     public String getWeaponSkill()
     {
         return weaponSkill;
