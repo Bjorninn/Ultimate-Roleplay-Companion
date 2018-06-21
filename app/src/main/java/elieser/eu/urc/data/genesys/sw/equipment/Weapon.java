@@ -15,7 +15,7 @@ public class Weapon extends Gear
     private Integer hardPoints;
     private List<String> special;
 
-    private Boolean addsToBrawn;
+    private boolean addsToBrawn;
 
     public Weapon()
     {
