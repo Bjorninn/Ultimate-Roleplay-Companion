@@ -1,4 +1,4 @@
-package com.carefreewizard.data.equipment.wrappers;
+package elieser.eu.urc.data.genesys.sw.equipment.wrappers;
 
 
 import java.util.List;

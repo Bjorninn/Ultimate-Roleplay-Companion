@@ -20,6 +20,7 @@
     <string name="intellect">Intellect</string>
     <string name="cunning">Cunning</string>
     <string name="willpower">Willpower</string>
+    <string name="presence">Presence</string>
     <string name="soak">Soak</string>
     <string name="soak_value">soak value</string>
     <string name="w_threshold">W. Threshold</string>

@@ -33,7 +33,8 @@ public class GenesysMainScene extends Fragment
 
         dataStore = new GenesysDataStore();
         dataStore.loadTalentData(getContext());
-        dataStore.loadAdversarieData(getContext());
+        dataStore.loadAdversariesData(getContext());
+        dataStore.loadWeaponData(getContext());
 
         helper = new GenesysHelper(getActivity().getAssets());
     }
@@ -67,7 +68,7 @@ public class GenesysMainScene extends Fragment
         SetOnClickListener(genesysAntagonistButton, GenesysAdversaryListScene.class);
 
         TextView textView = view.findViewById(R.id.testLabel);
-        Spannable dicePool = helper.createBoostOrSetbackDicePool(getContext(),4,true);
+        Spannable dicePool = helper.createBoostOrSetbackDicePool(getContext(), 4, true);
         textView.setText(dicePool);
     }
 

@@ -84,12 +84,12 @@ public class GenesysAdversaryListScene extends Fragment implements GenesysAdvers
     }
 
     @Override
-    public void onItemClicked(String adversaryName)
+    public void onItemClicked(String name)
     {
-//        Bundle bundle = new Bundle();
-//        bundle.putString(BundleKeys.NAME, talentName);
+        Bundle bundle = new Bundle();
+        bundle.putString(BundleKeys.NAME, name);
 //        bundle.putInt(BundleKeys.POSITION, position);
-//
-//        Navigator.navigationEvent(GenesysTalentScene.class, bundle, (AppCompatActivity) getActivity());
+
+        Navigator.navigationEvent(GenesysAdversaryScene.class, bundle, (AppCompatActivity) getActivity());
     }
 }

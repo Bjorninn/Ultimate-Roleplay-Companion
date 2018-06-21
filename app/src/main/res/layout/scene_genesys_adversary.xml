@@ -2,12 +2,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/light_cream"
+    android:clickable="true"
+    android:focusable="true">
+
+    <elieser.eu.urc.widgets.UrcToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="8dp"
         android:textAlignment="center"
         android:textColor="@color/cayenne"
         android:textSize="21sp"
@@ -36,14 +46,16 @@
                 android:src="@drawable/characteristic_circle" />
 
             <TextView
+                android:id="@+id/brawn"
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="-1dp"
                 android:layout_marginTop="-1dp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 tools:text="5" />
 
             <TextView
@@ -75,14 +87,16 @@
                 android:src="@drawable/characteristic_circle" />
 
             <TextView
+                android:id="@+id/agility"
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="-1dp"
                 android:layout_marginTop="-1dp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 tools:text="5" />
 
             <TextView
@@ -114,14 +128,16 @@
                 android:src="@drawable/characteristic_circle" />
 
             <TextView
+                android:id="@+id/intellect"
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="-1dp"
                 android:layout_marginTop="-1dp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 tools:text="5" />
 
             <TextView
@@ -154,14 +170,16 @@
                 android:src="@drawable/characteristic_circle" />
 
             <TextView
+                android:id="@+id/cunning"
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="-1dp"
                 android:layout_marginTop="-1dp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 tools:text="5" />
 
             <TextView
@@ -193,14 +211,16 @@
                 android:src="@drawable/characteristic_circle" />
 
             <TextView
+                android:id="@+id/willpower"
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="-1dp"
                 android:layout_marginTop="-1dp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 tools:text="5" />
 
             <TextView
@@ -232,14 +252,16 @@
                 android:src="@drawable/characteristic_circle" />
 
             <TextView
+                android:id="@+id/presence"
                 android:layout_width="64dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="-1dp"
                 android:layout_marginTop="-1dp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
+                android:textStyle="bold"
                 tools:text="5" />
 
             <TextView
@@ -248,7 +270,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/presence_circle"
                 android:background="@color/cinnamon"
-                android:text="@string/intellect"
+                android:text="@string/presence"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/cream"
@@ -284,11 +306,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/soak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/soak_value_header"
                 android:gravity="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="2" />
@@ -314,11 +337,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/wounds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/wound_threshold_header"
                 android:gravity="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="2" />
@@ -344,11 +368,12 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/strain"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/strain_threshold_header"
                 android:gravity="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="2" />
@@ -374,12 +399,13 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/ranged_defense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/defenses_header"
                 android:layout_toRightOf="@+id/split"
                 android:gravity="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="2" />
@@ -391,12 +417,13 @@
                 android:layout_centerInParent="true" />
 
             <TextView
+                android:id="@+id/melee_defense"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/defenses_header"
                 android:layout_toStartOf="@+id/split"
                 android:gravity="center"
-                android:textColor="@color/cinnamon"
+                android:textColor="@color/cayenne"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 tools:text="2" />
@@ -416,14 +443,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/skills"
+            android:layout_marginLeft="4dp"
             android:textColor="@color/cinnamon"
             android:textStyle="bold" />
 
-        <View
+        <LinearLayout
             android:id="@+id/skills"
             android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:background="@color/cream" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/cream"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:paddingTop="4dp"
+            tools:layout_height="24dp">
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"

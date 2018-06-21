@@ -12,6 +12,7 @@ import java.io.InputStream;
 import elieser.eu.urc.data.adnd.Spells;
 import elieser.eu.urc.data.genesys.Talents;
 import elieser.eu.urc.data.genesys.sw.adversaries.wrappers.Adversaries;
+import elieser.eu.urc.data.genesys.sw.equipment.wrappers.Weapons;
 
 /**
  * Created by bjorn on 21/04/16.
@@ -67,5 +68,12 @@ public class JsonLoader
         return gson.fromJson(json, Adversaries.class);
     }
 
+    public static Weapons genesysWeaponsFromJson(Context context)
+    {
+        String json = loadJsonFromAsset(context, "genesys/Weapons.json");
 
+        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+
+        return gson.fromJson(json, Weapons.class);
+    }
 }
