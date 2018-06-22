@@ -63,7 +63,7 @@ public class JsonLoader
     {
         String json = loadJsonFromAsset(context, "genesys/Adversaries.json");
 
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+        Gson gson = new GsonBuilder().create();
 
         return gson.fromJson(json, Adversaries.class);
     }
@@ -72,7 +72,7 @@ public class JsonLoader
     {
         String json = loadJsonFromAsset(context, "genesys/Weapons.json");
 
-        Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
+        Gson gson = new GsonBuilder().create();
 
         return gson.fromJson(json, Weapons.class);
     }

@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -165,13 +167,15 @@ public class GenesysAdversaryScene extends Fragment
                 TextView name = weaponView.findViewById(R.id.name);
                 name.setText(weapon.getName());
 
+                Integer weaponDamage = weapon.getDamage();
+
                 if (weapon.brawnIsAdded())
                 {
-
+                    weaponDamage += adversary.getAbilities().getBrawn();
                 }
 
                 TextView damage = weaponView.findViewById(R.id.damage);
-                damage.setText(String.valueOf(weapon.getDamage()));
+                damage.setText(String.valueOf(weaponDamage));
 
                 TextView crit = weaponView.findViewById(R.id.crit);
                 crit.setText(String.valueOf(weapon.getCritical()));
@@ -184,9 +188,18 @@ public class GenesysAdversaryScene extends Fragment
                     range.setText(weaponRange);
                 }
 
+                TextView skill = weaponView.findViewById(R.id.skill);
+                skill.setText(weapon.getWeaponSkill());
+
+                String specialJoined = StringUtils.join(",", weapon.getSpecial());
+                TextView special = weaponView.findViewById(R.id.special);
+                special.setText(specialJoined);
+
+                Log.d("BEJ", "HEREHREHREHRHE " + weapon.getWeaponSkill());
+
                 int color;
 
-                if (n%2 == 0)
+                if (n % 2 == 0)
                 {
                     color = ContextCompat.getColor(getContext(), R.color.cream);
                 }
@@ -202,57 +215,5 @@ public class GenesysAdversaryScene extends Fragment
                 n++;
             }
         }
-
-        Log.d("BEJ", "WEApppppp");
-
-        for (Weapon w : weapons)
-        {
-            Log.d("BEJ", w.getName());
-        }
-
-
-//        name.setText(TalentHelper.createNameSpannable(talent.getName()));
-
-
-//        tier.setText(TalentHelper.createTierSpannable(talent.getTier().toString()));
-//        activation.setText(TalentHelper.createActivationSpannable(talent.getActivation()));
-//
-//        if (talent.getRanked())
-//        {
-//            ranked.setText(TalentHelper.createRankedSpannable("Yes"));
-//        }
-//        else
-//        {
-//            ranked.setText(TalentHelper.createRankedSpannable("No"));
-//
-//        }
-//
-//        if (talent.getRequirement() != 0)
-//        {
-//            Talent prereqTalent = GenesysDataStore.getInstance().getTalent(talent.getRequirement());
-//            prerequisite.setVisibility(View.VISIBLE);
-//            prerequisite.setText(TalentHelper.createPrerequisiteSpannable(prereqTalent.getName()));
-//        }
-//        else
-//        {
-//            prerequisite.setVisibility(View.GONE);
-//        }
-//
-//        description.setText(talent.getDescription());
-//
-//        if (talent.hasKeywords())
-//        {
-//            keywords.setVisibility(View.VISIBLE);
-//            keywords.setText(TalentHelper.createKeywordsSpannable(talent.getKeywords()));
-//        }
-//        else
-//        {
-//            keywords.setVisibility(View.GONE);
-//        }
-//
-//        description.setText(TalentHelper.createDescriptionSpannable(talent.getDescription()));
-//        //description.setText(TalentHelper.testFont(getActivity().getAssets(), talent.getDescription()));
-//        //description.setText(talent.getDescription());
-//        source.setText(TalentHelper.createSourceSpannable(talent.getSource()));
     }
 }
